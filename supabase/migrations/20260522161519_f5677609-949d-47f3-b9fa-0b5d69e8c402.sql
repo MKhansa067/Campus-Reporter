@@ -155,21 +155,21 @@ create trigger on_auth_user_created
 
 -- Seed buildings & categories
 insert into public.buildings (name) values
-  ('Building A'), ('Building B'), ('Laboratory'), ('Library'), ('Mosque'), ('Hall');
+  ('Fakultas Sains dan Teknologi'), ('Fakultas Adab dan Humaniora'), ('Laboratorium'), ('Perpustakaan'), ('Masjid'), ('Hall');
 
 insert into public.categories (name, slug) values
-  ('Cleanliness','cleanliness'),
-  ('Electrical','electrical'),
+  ('Kebersihan','kebersihan'),
+  ('Elektrik','elektrik'),
   ('Internet/WiFi','internet'),
-  ('Classroom Equipment','classroom'),
-  ('Furniture','furniture'),
-  ('Water','water'),
+  ('Perlengkapan Ruang Kelas','ruang kelas'),
+  ('Furnitur','furnitur'),
+  ('Air','air'),
   ('Air Conditioner','ac'),
   ('Projector','projector'),
   ('Toilet','toilet'),
   ('Security','security'),
-  ('Parking','parking'),
-  ('Others','others');
+  ('Parkiran','parkiran'),
+  ('Lainnya','lainnya');
 
 -- Storage bucket
 insert into storage.buckets (id, name, public) values ('report-media','report-media', true)
