@@ -1,6 +1,9 @@
 {
   "framework": null,
   "buildCommand": "bun run build",
-  "outputDirectory": ".output/public",
-  "installCommand": "bun install"
+  "installCommand": "bun install",
+  "routes": [
+    { "src": "/_vercel/(.*)", "dest": "/_vercel/$1" },
+    { "src": "/(.*)", "dest": "/api/server.ts" }
+  ]
 }

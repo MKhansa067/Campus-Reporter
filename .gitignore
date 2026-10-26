@@ -13,6 +13,8 @@ dist-ssr
 .output
 .vinxi
 .tanstack/**
+src/routeTree.gen.ts
+src/rouTree.gen.ts
 .nitro
 *.local
 

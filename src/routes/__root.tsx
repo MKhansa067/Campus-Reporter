@@ -14,6 +14,28 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 import appCss from "../styles.css?url";
 
+export const Route = createRootRouteWithContext()({
+  component: RootComponent,
+});
+
+function RootComponent() {
+  const queryClient = useQueryClient();
+  return (
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <div className="min-h-screen bg-background text-foreground">
+          <HeadContent />
+          <Header />
+          <Outlet />
+          <Footer />
+          <Scripts />
+          <Toaster />
+        </div>
+      </AuthProvider>
+    </QueryClientProvider>
+  );
+}
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center px-4">
